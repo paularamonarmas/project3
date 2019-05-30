@@ -212,24 +212,37 @@
       </div><br>
 
     <!-- Container (TDA) -->
-    <div id="search" class="container-fluid text-center">
-      <h2>SEARCH</h2><br>
-      <div class=center>
-        <img src="static/images/icecream_dice.jpg"  style="width:300px;height:300px;" alt="Image">
-       <div id="contact-form">
-         <form method="post" action="/tda">
-          <select name="tda">
-           <option value="restaurants">Restaurants</option>
-            <option value="art">Art</option>
-            <option value="active">Active</option>
-            <option value="your space">Your Space</option>
-          </select>
-            <br><br>
-            <input type="submit">
-         </form>
-       </div>
-     </div>
+    <form action="/action_page.php">
+
+  <fieldset>
+Looking For: <input list="Activities" name="Activities"><br>
+  <datalist id="Activities">
+    <option value="Art">
+    <option value="Restaurants">
+    <option value="Parks">
+    <option value="Movies and Plays">
+    <option value="Sport">
+  </datalist>
+Location: <input list="Location" name="Location"><br>
+    <datalist id="Location">
+      <option value="London">
+      <option value="Central London">
+      <option value="North London">
+      <option value="East London">
+      <option value="South London">
+      <option value="West London">
+    </datalist>
+<div class="form-group margin-bottom-none">
+      <label class="control-label col-xs-12 col-sm-3 hidden-xs"></label>
+      <div class="col-xs-12 col-sm-9">
+        <button ga-track-event="['Hero search', 'search', hero.search.type]" type="submit" class="btn btn-lg btn-block btn-primary shimmer-effect animated pulse">
+          Discover &amp; book <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
+  </fieldset>
+</form>
+
 
 
       <h2>What our followers say</h2>
